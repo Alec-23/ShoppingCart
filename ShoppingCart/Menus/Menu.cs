@@ -10,7 +10,7 @@ internal class Menu
         Console.WriteLine("2. View products");
         Console.WriteLine("3. Save products");
         Console.WriteLine("4. Exit");
-        Console.Write("Select an option (1-4): ");
+        Console.Write("\nSelect an option (1-4): ");
 
         var option = Console.ReadLine();
 
@@ -29,7 +29,7 @@ internal class Menu
                 break;
 
             default:
-                Console.WriteLine("\nInvalid option. Please select 1-4.");
+                Console.WriteLine("\nInvalid option. Please select an option between 1-4.");
                 Console.ReadKey();
                 break;
         }
