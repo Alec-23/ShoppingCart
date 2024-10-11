@@ -1,6 +1,6 @@
 ﻿namespace Resources.Models;
 
-internal class Product
+public class Product
 {
     public Guid ID { get; }
     public string Name { get; set; } = null!;
