@@ -17,4 +17,8 @@ public class ProductServices
         var product = new Product(name, price);
         _products.Add(product);
     }
+    public List<Product> GetAllProducts()
+    {
+        return _products;
+    }
 }

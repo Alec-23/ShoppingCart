@@ -28,4 +28,25 @@ public class ProductController
         Console.WriteLine("Press any key to return to the menu.");
         Console.ReadKey();
     }
+    public void ViewProducts()
+    {
+        var products = _productService.GetAllProducts();
+        if (products.Count == 0)
+        {
+            Console.WriteLine("No products available");
+            Console.WriteLine("Press any key to return to the menu");
+            Console.ReadKey();
+        }
+        else
+        {
+            Console.WriteLine("\nProduct list:");
+            foreach (var product in products)
+            {
+                Console.WriteLine($"ID: {product.ID}, Name: {product.Name}, Price: {product.Price:C}");
+            }
+            Console.WriteLine("Press any key to return to the menu");
+            Console.ReadKey();
+
+        }
+    }
 }

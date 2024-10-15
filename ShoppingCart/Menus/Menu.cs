@@ -35,6 +35,7 @@ public class Menu
                     break;
 
                 case "2":
+                    _productController.ViewProducts();
                     break;
 
                 case "3":
