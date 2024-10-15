@@ -20,6 +20,7 @@ public class ProductController
         {
             _productService.AddProduct(name, price);
             Console.WriteLine("Product added successfully.");
+            _productService.SaveProducts();
         }
         else
         {
@@ -46,7 +47,10 @@ public class ProductController
             }
             Console.WriteLine("Press any key to return to the menu");
             Console.ReadKey();
-
         }
+    }
+    public void LoadProducts()
+    {
+        _productService.LoadProducts();
     }
 }

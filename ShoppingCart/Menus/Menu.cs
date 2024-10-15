@@ -11,6 +11,7 @@ public class Menu
     {
         var productService = new ProductServices();
         _productController = new ProductController(productService);
+        _productController.LoadProducts();
     }
 
     public void ShowMenu()

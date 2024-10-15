@@ -1,4 +1,5 @@
 ﻿using Resources.Models;
+using System.Text.Json;
 
 namespace Resources.Services;
 
@@ -20,5 +21,20 @@ public class ProductServices
     public List<Product> GetAllProducts()
     {
         return _products;
+    }
+
+    public void SaveProducts()
+    {
+        string json = JsonSerializer.Serialize(_products, new JsonSerializerOptions { WriteIndented = true });
+        File.WriteAllText("products.json", json);
+    }
+
+    public void LoadProducts()
+    {
+        if (File.Exists("products.json"))
+        {
+            string json = File.ReadAllText("products.json");
+            _products = JsonSerializer.Deserialize<List<Product>>(json) ?? new List<Product>(); 
+        }
     }
 }
