@@ -22,9 +22,8 @@ public class Menu
             Console.WriteLine("ShoppingCart Menu");
             Console.WriteLine("1. Add product");
             Console.WriteLine("2. View products");
-            Console.WriteLine("3. Save products");
-            Console.WriteLine("4. Exit");
-            Console.Write("\nSelect an option (1-4): ");
+            Console.WriteLine("3. Exit");
+            Console.Write("\nSelect an option (1-3): ");
 
             var option = Console.ReadLine();
 
@@ -39,9 +38,6 @@ public class Menu
                     break;
 
                 case "3":
-                    break;
-
-                case "4":
                     break;
 
                 default:
