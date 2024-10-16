@@ -53,4 +53,10 @@ public class ProductController
     {
         _productService.LoadProducts();
     }
+
+    public void SaveProducts()
+    {
+        _productService.SaveProducts();
+    }
+
 }

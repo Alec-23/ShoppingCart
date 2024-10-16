@@ -39,6 +39,9 @@ public class Menu
                     break;
 
                 case "3":
+                    Console.WriteLine("Exiting the application.");
+                    _productController.SaveProducts();
+                    exit = true;
                     break;
 
                 default:
