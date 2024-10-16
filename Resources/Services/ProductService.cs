@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace Resources.Services;
 
-public class ProductServices
+public class ProductService
 {
     private List<Product> _products = new List<Product>();
 

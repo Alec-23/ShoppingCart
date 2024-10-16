@@ -4,9 +4,9 @@ namespace ShoppingCart.Controllers;
 
 public class ProductController
 {
-    private readonly ProductServices _productService;
+    private readonly ProductService _productService;
 
-    public ProductController(ProductServices productService)
+    public ProductController(ProductService productService)
     {
         _productService = productService;
     }

@@ -9,7 +9,7 @@ public class Menu
 
     public Menu()
     {
-        var productService = new ProductServices();
+        var productService = new ProductService();
         _productController = new ProductController(productService);
         _productController.LoadProducts();
     }
