@@ -18,9 +18,17 @@ public class ProductController
         Console.Write("Enter product price: ");
         if (decimal.TryParse(Console.ReadLine(), out decimal price))
         {
-            _productService.AddProduct(name, price);
-            Console.WriteLine("Product added successfully.");
-            _productService.SaveProducts();
+            bool productAdded = _productService.AddProduct(name, price);
+            if (productAdded)
+            {
+                Console.WriteLine("Product added successfully.");
+                _productService.SaveProducts();
+            }
+            else
+            {
+                Console.WriteLine("Product with the same name already exists");
+            }
+
         }
         else
         {

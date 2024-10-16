@@ -7,16 +7,16 @@ public class ProductService
 {
     private List<Product> _products = new List<Product>();
 
-    public void AddProduct(string name, decimal price)
+    public bool AddProduct(string name, decimal price)
     {
         if (_products.Exists(p => p.Name.Equals(name, StringComparison.OrdinalIgnoreCase)))
         {
-            Console.WriteLine("Product with the same name already exists.");
-            return;
+            return false;
         }
 
         var product = new Product(name, price);
         _products.Add(product);
+        return true;
     }
     public List<Product> GetAllProducts()
     {
